@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "ProductivityBar",
+  "description": "This extension is for productivity",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+    },
+  
+  "background": {
+  	"scripts": ["background.js"],
+  	"persistent": false
+  	},
+  	
+  	  "content_scripts": [{
+  		"matches": ["http://*/*", "https://*/*"],
+  		"css": ["css/bar.css"]
+  	}],
+  	
+  
+  "permissions": [
+    "tabs", "storage", "http://*/*", "https://*/*"
+  ]
+}
